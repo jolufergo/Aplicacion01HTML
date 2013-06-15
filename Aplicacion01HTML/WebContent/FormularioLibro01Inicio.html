@@ -1,0 +1,28 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+<script type="text/javascript"> //funcion javascript para validar el campo del formulario isbn
+	function validacion(){
+		if(document.forms[0].isbn.value=="") //si el campo isbn es vacio dar alerta
+			alert("datos no validos");
+		else
+			document.forms[0].submit();//si esta relleno enviar datos del formulario
+		
+	}
+</script>
+<title>Formulario Libro</title>
+</head>
+<body>
+<h1>Formulario libro</h1>
+<form>
+ISBN:
+<input type="text" name="isbn"><br>
+Titulo:
+<input type="text" name="titulo"><br>
+Categoria:
+<input type="text" name="categoria"><br>
+<input type="button" value="Insertar" onclick="validacion()"> <!--se llama con onclick al javascript-->
+</form>
+</body>
+</html>
